@@ -3,6 +3,7 @@ class Users extends Controller{
 
     public function __construct(){
       $this->userModel = $this->model('User');
+   
     }
 
     public function register(){
@@ -75,6 +76,7 @@ class Users extends Controller{
 
 
         } else {
+        
           // Init data
           $data =[
             'name' => '',
@@ -164,6 +166,7 @@ class Users extends Controller{
         $_SESSION['user_id'] = $user->id;
         $_SESSION['user_email'] = $user->email;
         $_SESSION['user_name'] = $user->name;
+     
         redirect('posts');
       }
 

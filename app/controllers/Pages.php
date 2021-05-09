@@ -5,6 +5,9 @@ class Pages extends Controller{
     }
 
     public function index(){
+        if(isLoggedIn()){
+            redirect('posts');
+        }
         $data =  ['title' => 'ShareLinks',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni porro rem voluptates, ?'
     ];
